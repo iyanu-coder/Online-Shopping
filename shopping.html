@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/gif" href="image/bulbon.gif">
+    <link rel="stylesheet" href="boostrap/css/bootstrap.css">
+    <link rel="stylesheet" href="shoping.css">
+    <title>Online shop</title>
+</head>
+<body>
+    <h6>INVENTORY SYSTEM</h6>
+    <div class="real">
+    <div class="top"><br><br>
+        <input type="" id="inp" placeholder="Item">
+        <input type="" id="details" placeholder="Price">
+        <input type="" id="quantity" placeholder="Quantity"><br><br><br>  
+        <input type="date" id="daa" placeholder="Date">  
+        <input type="" id="seller" placeholder="Seller">  
+        <input type="" id="total" placeholder="Total"> <br><br>
+        <input type="file" id="folo">
+        <input id="sub" onclick="save()" value="Submit" type="submit">
+    </div>
+   
+
+
+<table class="red" style="border: 3px solid green; width: 788px;">
+
+	<tr><th>Item</th><th>Price</th><th>Quantity</th><th>Date</th><th>Sellers</th><th>Total</th><th>Orders</th></tr>
+	<tbody  id="show">
+		
+	</tbody><br><br>
+</table><br>
+<button onclick="disp()" id="doll">List of last investory</button>
+<button id="dead" onclick="window.print()">Print</button>
+</body>
+    </div>
+<script type="text/javascript">
+
+save=()=>{
+	let arr
+	let a=document.getElementById('inp').value
+	let b=document.getElementById('details').value
+    let c=document.getElementById('quantity').value
+    let d=document.getElementById('daa').value
+    let e=document.getElementById('seller').value
+    let f=document.getElementById('total').value
+    let g=document.getElementById('folo').value
+	if(localStorage.getItem('notes')!==null){
+ arr=JSON.parse(localStorage.notes)
+}
+else{
+	 arr=[]
+	}
+		let obj={}
+obj={Item:a,price:b, quantity:c, date:d, seller:e, total:f, folo:g,}
+arr.push(obj)
+localStorage.setItem('notes',JSON.stringify(arr))
+}
+
+disp=()=>{
+
+	let myTable=document.getElementById('show')
+	let myArr=JSON.parse(localStorage.notes)
+myTable.innerHTML=''
+	myArr.forEach(
+		function (each,i) {
+			
+myTable.innerHTML+=`<tr><td>${each.Item}</td><td>${each.price}</td><td>${each.quantity}</td><td>${each.date}</td><td>${each.seller}</td><td>${each.total}</td><td>${each.folo}</td></tr>`
+		})
+}
+</script>
+</body>
+</html>

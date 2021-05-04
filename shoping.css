@@ -1,0 +1,93 @@
+h6 {
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    text-align: center;
+}
+
+input{
+    margin-left: 90px;
+}
+
+#show{
+    margin-left: 90px;
+}
+.red{
+    margin-left: 90px;
+}
+.real{
+    background-color: burlywood;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.butt{
+    width: 80px;
+}
+
+.top{
+margin-top: 20px;
+}
+.top input{
+    width:200px ;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border:1px solid grey;
+    outline: none;
+    z-index: +5;
+}
+#sub{
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: black;
+    border:1px solid grey;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+    padding-left: 0;
+    transition: all 2s 0s;
+    color: white;
+}
+#sub:hover{
+    background-color: rgb(15, 18, 199);
+    transition: all 0.5s 0s;
+}
+#doll{
+    width: 170px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(6, 3, 37);
+    border:1px solid grey;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+    padding-left: 0;
+    transition: all 2s 0s;
+    color: white;
+}
+#doll:hover{
+    background-color: rgb(16, 90, 65);
+    transition: all 0.5s 0s;
+}
+
+#dead{
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: black;
+    border:1px solid grey;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+    padding-left: 0;
+    transition: all 2s 0s;
+    color: white;
+}
+#dead:hover{
+    background-color: rgb(138, 6, 6);
+    transition: all 0.5s 0s;
+}
+
+/* @media screen and (min-width: 1000px){
+
+} */
